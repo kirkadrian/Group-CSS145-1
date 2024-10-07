@@ -9,6 +9,8 @@ st.header("Laptop Prices Dataset")
 
 df = pd.read_csv("dataset/laptop_price.csv")
 
+#Manalang 1
+
 df.head(10)
 
 nbins = int(np.sqrt(len(df)))
@@ -21,3 +23,5 @@ plt.xlabel('Price (Euro)')
 plt.ylabel('Frequency')
 
 st.pyplot(plt)
+
+#Manalang 2
