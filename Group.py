@@ -43,3 +43,14 @@ plt.title('Distribution of Laptop Types', fontsize=12, fontweight='bold')
 
 plt.axis('equal')
 plt.show()
+
+#Sunico 1
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.scatter(df['Inches'], df['Price (Euro)'], color='blue', alpha=0.6, edgecolor='white',s=65)
+ax.set_xlabel('Inches')
+ax.set_ylabel('Price in Euros')
+ax.set_title('Inches vs Price (Euro)', fontweight='bold')
+ax.grid(color='gray', linestyle='--', linewidth=0.5, alpha=0.9)
+ax.set_aspect(aspect='auto')
+plt.show()
+
