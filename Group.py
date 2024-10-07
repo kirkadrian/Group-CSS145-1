@@ -54,3 +54,19 @@ ax.grid(color='gray', linestyle='--', linewidth=0.5, alpha=0.9)
 ax.set_aspect(aspect='auto')
 plt.show()
 
+#Sunico 2
+df = pd.read_csv('/laptop_price.csv')
+company_counts = df['GPU_Company'].value_counts()
+
+labels = company_counts.index
+sizes = company_counts.values
+
+colors = ['#00C7FD', '#76b900', '#ED1C24', '#0091BD'] #each of the hex codes are colors that each the companies use, you can barely see ARM but it also has a blue color.
+explode = [0.05, 0.05, 0.05, 0.05]
+
+plt.figure(figsize=(10, 9))
+plt.pie(sizes, labels=labels, autopct='%0.2f%%', startangle=45, colors=colors, explode=explode, wedgeprops={'edgecolor':'black', 'linewidth' : 0.5, 'antialiased' : True}, shadow=True)
+plt.axis('equal')
+plt.title('Distribution of GPU Companies', fontsize=16, fontweight='bold')
+
+plt.show()
